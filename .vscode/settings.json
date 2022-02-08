@@ -1,0 +1,9 @@
+{
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/windriver_linux_project/build": true,
+    }
+}
