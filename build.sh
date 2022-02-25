@@ -19,9 +19,10 @@ cd "${windriver_linux_project_dir}"
     --accept-eula yes \
     --distros poky wrlinux \
     --machines xilinx-zynqmp \
-    --layers meta-networking meta-mingw meta-python meta-oe \
+    --layers meta-xilinx-tools xilinx-zynqmp meta-networking meta-mingw meta-python meta-oe \
     --templates feature/lttng feature/gdb feature/sftp-server feature/wrvscode feature/lttng
 
 source "${windriver_linux_project_dir}/oe-init-build-env"
 ln -sfv "${conf_dir}/local.conf" "${build_conf_dir}"
+bitbake-layers add-layer "/home/kd/windriver-linux-test/windriver_linux_project/layers/meta-openamp"
 bitbake wrlinux-image-small
